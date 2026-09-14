@@ -215,11 +215,24 @@ function initMotion() {
 
   gsap.utils.toArray("[data-parallax]").forEach((el) => {
     if (reduceMotion()) return;
-    gsap.to(el, {
-      yPercent: Number(el.dataset.parallax) || 12,
-      ease: "none",
-      scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: 1 },
-    });
+    const amount = Number(el.dataset.parallax) || 12;
+    const trigger = el.parentElement;
+    const inFirstScreen = trigger.getBoundingClientRect().top < window.innerHeight * 0.4;
+    gsap.fromTo(
+      el,
+      { yPercent: 0, scale: 1.12 },
+      {
+        yPercent: amount,
+        scale: 1.12,
+        ease: "none",
+        scrollTrigger: {
+          trigger,
+          start: inFirstScreen ? "top top" : "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      }
+    );
   });
 
   if (!reduceMotion()) {
