@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mantenedora | Obra Social Santa Clara</title>
+  <meta name="description" content="Irmãs de São Francisco da Providência de Deus, congregação fundada em 1922 em Pittsburgh e presente no Brasil desde 1938." />
+  <link rel="icon" href="https://obrasocialsantaclara.org.br/view/img/layout/logo-obra-3.png" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: "class" };</script>
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body class="bg-[var(--paper)] text-[var(--ink)]" data-page="mantenedora">
+  <div class="grain"></div>
+  <div id="app-header"></div>
+  <main>
+    <section class="page-hero min-h-[64dvh]">
+      <img data-parallax="10" src="https://obrasocialsantaclara.org.br/view/img/hitorico/irmas.jpg" alt="Irmãs Franciscanas da Providência de Deus" />
+      <div class="scrim"></div>
+      <div class="relative wrap pb-14 text-white">
+        <h1 class="display text-4xl md:text-6xl max-w-3xl leading-[1.1] pb-1">Irmãs de São Francisco da Providência de Deus</h1>
+        <p class="mt-5 max-w-xl text-white/85">A congregação que sustenta a Obra com fé, educação e presença nos meios populares.</p>
+      </div>
+    </section>
+
+    <section class="wrap py-24 grid lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-5 js-reveal">
+        <ol class="grid gap-8">
+          <li>
+            <p class="display text-4xl text-[var(--accent)]">1922</p>
+            <p class="lede mt-2">Fundação em 12 de março, na Diocese de Pittsburgh, Pensilvânia, sob a proteção de Deus que é Providência.</p>
+          </li>
+          <li>
+            <p class="display text-4xl text-[var(--accent)]">1938</p>
+            <p class="lede mt-2">Cinco irmãs atravessaram o mar e chegaram ao Brasil em 27 de agosto, a pedido da Igreja local, para as famílias lituanas em Vila Zelina, São Paulo.</p>
+          </li>
+          <li>
+            <p class="display text-4xl text-[var(--accent)]">Hoje</p>
+            <p class="lede mt-2">Duas províncias: Pittsburgh e Brasil. Sede provincial brasileira em São Paulo, com colégios, obras sociais, saúde e missão em Guanay, Bolívia.</p>
+          </li>
+        </ol>
+      </div>
+      <div class="lg:col-span-7 js-reveal">
+        <p class="lede">Após a Primeira Guerra, muitos europeus partiram para as Américas. Nos Estados Unidos crescia o número de imigrantes lituanos, e faltavam religiosas para escolas, catequese e presença evangelizadora.</p>
+        <p class="lede mt-5">Irmãs de origem lituana deixaram a Congregação da Sagrada Família de Nazaré para o apostolado junto às famílias daqueles imigrantes. Foram acolhidas pelas Irmãs Franciscanas de Millvale, Pittsburgh, por seis anos, até se tornarem congregação autônoma.</p>
+        <p class="lede mt-5">Apoiadas pelo Bispo D. Hugh C. Boyle, por Monsenhor M. L. Krusas e pelos padres A. J. Sutkaites e M. Kazenas, as pioneiras enfrentaram pobreza, falta de recursos e ousadia. O que as sustentava era Deus, na sua Providência. Inspiradas em São Francisco de Assis, começaram pela educação de crianças e jovens, com cuidado aos doentes e assistência aos necessitados.</p>
+      </div>
+    </section>
+
+    <section class="wrap pb-24">
+      <h2 class="display text-4xl md:text-5xl js-reveal">Presença no Brasil</h2>
+      <p class="lede mt-6 js-reveal">A missão, no início voltada ao povo lituano, foi redimensionada: educação nos colégios, obras sociais promocionais, saúde, formação, paróquias em meios populares e administração de outros serviços.</p>
+      <div class="grid md:grid-cols-2 gap-4 mt-10">
+        <article class="shell js-reveal"><div class="core p-7"><h3 class="display text-2xl">São Paulo</h3><p class="mt-2 text-[var(--ink-soft)]">Três colégios e duas obras sociais na capital. Também Nova Veneza, São Pedro e Santana de Parnaíba.</p></div></article>
+        <article class="shell js-reveal"><div class="core p-7"><h3 class="display text-2xl">Outras casas</h3><p class="mt-2 text-[var(--ink-soft)]">Guajará-Mirim (RO) e Maceió (AL), na saúde e na pastoral popular. Missão em Guanay, Bolívia, desde 2005. Irmãs americanas também na Lituânia.</p></div></article>
+      </div>
+      <div class="flex flex-wrap gap-8 items-center mt-14 js-reveal">
+        <img src="https://obrasocialsantaclara.org.br/view/img/layout/clara-1.png" alt="Santa Clara" class="h-24 object-contain" />
+        <img src="https://obrasocialsantaclara.org.br/view/img/layout/francisco-1.png" alt="São Francisco de Assis" class="h-24 object-contain" />
+        <img src="https://obrasocialsantaclara.org.br/view/img/layout/agenda_2030.png" alt="Agenda 2030" class="h-20 object-contain" />
+      </div>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
