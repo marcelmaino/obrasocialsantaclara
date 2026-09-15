@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orçamento | Atualização do site Santa Clara</title>
+  <meta name="description" content="Proposta de investimento para atualização do site da Obra Social Santa Clara: R$ 1.800 à vista ou 3x de R$ 700." />
+  <link rel="icon" href="https://obrasocialsantaclara.org.br/view/img/layout/logo-obra-3.png" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: "class" };</script>
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body class="bg-[var(--paper)] text-[var(--ink)]" data-page="orcamento">
+  <div class="grain"></div>
+  <div id="app-header"></div>
+
+  <main id="orcamento" class="pt-28 pb-24" data-selected="vista">
+    <section class="wrap max-w-3xl">
+      <p class="text-[var(--accent-deep)] font-semibold">Proposta comercial</p>
+      <h1 class="display text-4xl md:text-6xl leading-[1.1] pb-1 mt-3">Atualização do site</h1>
+      <p class="lede mt-5">Novo modelo visual em HTML e Tailwind, com todas as páginas atuais, navegação, animações e a identidade da Obra Social Santa Clara.</p>
+    </section>
+
+    <section class="wrap mt-14 grid lg:grid-cols-12 gap-6 items-start">
+      <div class="lg:col-span-7 grid gap-4">
+        <button type="button" class="plan shell is-on" data-plan="vista" aria-pressed="true">
+          <div class="core">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm text-[var(--ink-mute)]">Melhor condição</p>
+                <h2 class="display text-3xl mt-1">À vista</h2>
+              </div>
+              <span class="plan-check" aria-hidden="true"><i class="ph ph-check text-xs"></i></span>
+            </div>
+            <p class="stat text-5xl md:text-6xl mt-8 text-[var(--accent-deep)]">R$ 1.800</p>
+            <p class="mt-3 text-[var(--ink-soft)]">Pagamento único. Economia de R$ 300 em relação ao parcelado.</p>
+          </div>
+        </button>
+
+        <button type="button" class="plan shell" data-plan="parcelado" aria-pressed="false">
+          <div class="core">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm text-[var(--ink-mute)]">Dividido</p>
+                <h2 class="display text-3xl mt-1">3 vezes</h2>
+              </div>
+              <span class="plan-check" aria-hidden="true"><i class="ph ph-check text-xs"></i></span>
+            </div>
+            <p class="stat text-5xl md:text-6xl mt-8">3 x R$ 700</p>
+            <p class="mt-3 text-[var(--ink-soft)]">Total de R$ 2.100. Mesmo escopo, pagamento em três parcelas iguais.</p>
+          </div>
+        </button>
+      </div>
+
+      <aside class="lg:col-span-5 lg:sticky lg:top-28">
+        <div class="shell">
+          <div class="core p-7 bg-[var(--paper-2)]">
+            <p class="text-sm text-[var(--ink-mute)]">Resumo do investimento</p>
+            <p id="quote-name" class="display text-3xl mt-2">À vista</p>
+            <p id="quote-total" class="stat text-5xl mt-6 text-[var(--accent-deep)]">R$ 1.800,00</p>
+            <p id="quote-parcels" class="mt-2 font-semibold">1 parcela</p>
+            <p id="quote-detail" class="mt-3 text-[var(--ink-soft)]">Pagamento único, com R$ 300 de economia.</p>
+            <button type="button" id="quote-accept" class="btn btn-primary js-magnetic mt-8 w-full justify-center">
+              <span>Confirmar plano</span>
+              <span class="btn-ico"><i class="ph ph-check text-sm"></i></span>
+            </button>
+            <p id="quote-done" class="hidden mt-4 text-sm leading-relaxed text-[var(--accent-deep)]" role="status"></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="wrap mt-20">
+      <h2 class="display text-4xl">O que entra neste valor</h2>
+      <div class="grid md:grid-cols-2 gap-4 mt-8">
+        <article class="shell"><div class="core p-6"><h3 class="display text-2xl">Identidade nova</h3><p class="mt-2 text-[var(--ink-soft)]">Design system com as cores, o Tau e o tom da marca, em um visual moderno e limpo.</p></div></article>
+        <article class="shell"><div class="core p-6"><h3 class="display text-2xl">Todas as páginas</h3><p class="mt-2 text-[var(--ink-soft)]">Home, Quem somos, Mantenedora, Pedagógico, Nutrição, Social, Galeria, Doar, Ouvidoria e Privacidade.</p></div></article>
+        <article class="shell"><div class="core p-6"><h3 class="display text-2xl">Navegação</h3><p class="mt-2 text-[var(--ink-soft)]">Menu, rodapé, tema claro e escuro, e caminhos para doar, voluntariado e Pix.</p></div></article>
+        <article class="shell"><div class="core p-6"><h3 class="display text-2xl">Movimento</h3><p class="mt-2 text-[var(--ink-soft)]">Scroll suave, parallax, contadores, microinterações e transições com GSAP e Lenis.</p></div></article>
+      </div>
+    </section>
+
+    <section class="wrap mt-16 max-w-3xl">
+      <h2 class="display text-3xl">Como seguir</h2>
+      <p class="lede mt-4">Escolha à vista ou parcelado no resumo. O valor cobre o modelo visual já apresentado, em HTML e CSS Tailwind, pronto para revisão e publicação. Ajustes de texto, fotos e publicação no domínio da Obra entram no alinhamento seguinte.</p>
+      <div class="flex flex-wrap gap-3 mt-8">
+        <a href="index.html" class="btn btn-ghost js-magnetic"><span>Ver o protótipo</span><span class="btn-ico"><i class="ph ph-arrow-right text-sm"></i></span></a>
+        <a href="mailto:atendimento@obrasocialsantaclara.org.br?subject=Orçamento atualização do site" class="btn btn-primary js-magnetic"><span>Falar sobre o pagamento</span><span class="btn-ico"><i class="ph ph-envelope-simple text-sm"></i></span></a>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

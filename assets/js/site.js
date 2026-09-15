@@ -384,10 +384,63 @@ function initForms() {
   });
 }
 
+function initBudget() {
+  const root = document.getElementById("orcamento");
+  if (!root) return;
+
+  const plans = {
+    vista: {
+      label: "À vista",
+      total: "R$ 1.800,00",
+      detail: "Pagamento único, com R$ 300 de economia.",
+      parcels: "1 parcela",
+    },
+    parcelado: {
+      label: "3 vezes",
+      total: "R$ 2.100,00",
+      detail: "3 parcelas de R$ 700,00.",
+      parcels: "3 x R$ 700,00",
+    },
+  };
+
+  const buttons = root.querySelectorAll("[data-plan]");
+  const nameEl = document.getElementById("quote-name");
+  const totalEl = document.getElementById("quote-total");
+  const detailEl = document.getElementById("quote-detail");
+  const parcelsEl = document.getElementById("quote-parcels");
+  const accept = document.getElementById("quote-accept");
+  const done = document.getElementById("quote-done");
+
+  const select = (id) => {
+    const plan = plans[id];
+    if (!plan) return;
+    buttons.forEach((btn) => btn.classList.toggle("is-on", btn.dataset.plan === id));
+    buttons.forEach((btn) => btn.setAttribute("aria-pressed", btn.dataset.plan === id ? "true" : "false"));
+    if (nameEl) nameEl.textContent = plan.label;
+    if (totalEl) totalEl.textContent = plan.total;
+    if (detailEl) detailEl.textContent = plan.detail;
+    if (parcelsEl) parcelsEl.textContent = plan.parcels;
+    root.dataset.selected = id;
+  };
+
+  buttons.forEach((btn) => btn.addEventListener("click", () => select(btn.dataset.plan)));
+  select("vista");
+
+  accept?.addEventListener("click", () => {
+    const chosen = plans[root.dataset.selected] || plans.vista;
+    done.classList.remove("hidden");
+    done.textContent = `Plano ${chosen.label} selecionado: ${chosen.total}. Próximo passo: alinhar o pagamento e o cronograma de publicação.`;
+    const label = accept.querySelector("span");
+    if (label) label.textContent = "Plano escolhido";
+    accept.setAttribute("aria-disabled", "true");
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initChrome();
   initMagnetic();
   initFaq();
   initForms();
+  initBudget();
   initMotion();
 });
